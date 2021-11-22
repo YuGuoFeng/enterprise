@@ -1,0 +1,86 @@
+
+{include file="common/head" /}
+<!-- END 头部结束 -->
+<div class="loading-content" >
+    <div class="loading-animate">
+        <img class="load-svg" src="__CDN__/assets/img/images/bg2.png" alt="">
+        <div class="loading-fill__pic animate"></div>
+    </div>
+</div>
+
+<div class="wrap" style="display: block;">
+    <section class="in-banner">
+        <div class="in-banner__slick slick-initialized slick-slider slick-dotted">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    {foreach $banner_list as $vo}
+                        <div class="swiper-slide">
+                            <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" role="tabpanel" style="width: 1780px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" aria-describedby="slick-slide-control00">
+                                <div>
+                                    <div class="item-box" style="width: 100%; display: inline-block;">
+                                        <a href="###" projecttarget="_blank" tabindex="0">
+                                            <div class="item-bg bg-cover" style="background-image: url({$vo.image});"></div>
+                                            <div class="item-cont">
+                                                <div class="item-inner">
+                                                    <div class="item-etitle fs48 wow fadeInUp" data-wow-duration="0.5s">{$vo.title} </div>
+                                                    {if condition="$language == 'cn'"}
+                                                    <div class="item-ctitle fs24 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1s" >{$vo.en_title}</div>
+                                                    {/if}
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/foreach}
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- START 底部开始 -->
+    <footer>
+        <div class="footer">
+            <div class="footer-main">
+                <div class="copyright">
+                    <a href="https://beian.miit.gov.cn/" target="_blank">
+                        ©2021再造 粤ICP备18001316号-1 Designed By ZAIZAO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="foot-fix"></div>
+    <div class="foot-place"></div>
+    <!-- END 底部结束 -->
+</div>
+
+{include file="common/script" /}
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: 4000, //可选选项，自动滑动
+        onSlideChangeEnd: function (swiper) {
+            var wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            });
+            wow.init();
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<div class="head-nav__wrap">
+    <div class="head-left__area">
+        <a href="javascript:;" class="menu-btn">
+            <i></i><i></i><i></i>
+        </a>
+    </div>
+
+    <div class="head-navs">
+        <ul class="head-menu">
+            {foreach $nav_list as $vo}
+                {if condition = "empty($vo['child'])"}
+                    <li class="menu-item ">
+                        <a href="/{$language}/{$vo.url}/{$vo.id}">
+                            <span class="hm-en fs24">{$vo.en_name}</span>
+                            {if condition="$language == 'cn'"}
+                                <span class="hm-cn fs20">{$vo.name}</span>
+                            {/if}
+                        </a>
+                    </li>
+                {else /}
+                    <li class="menu-item ">
+                        <a href="javascript:;">
+                            <span class="hm-en fs24">{$vo.en_name}</span>
+                            {if condition="$language == 'cn'"}
+                                <span class="hm-cn fs20">{$vo.name}</span>
+                            {/if}
+                        </a>
+                        <div class="head-subnav">
+                            <ul>
+                                {foreach $vo['child'] as $co}
+                                <li>
+                                    <a href="###">{$co.name}</a>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </li>
+                {/if}
+                
+            {/foreach}
+        </ul>
+    </div>
+</div>
