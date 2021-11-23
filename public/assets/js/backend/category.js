@@ -39,7 +39,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                             field: 'nav',
                             title: __('Nav'),
                             table: table,
-                            custom: {"0": 'success', "1": 'danger'},
+                            // custom: {"0": 'success', "1": 'danger'},
+                            custom: {"0": 'danger', "1": 'success'},
                             searchList: {"0": __('Nav 0'), "1": __('Nav 1')},
                             formatter: Table.api.formatter.status
                         },
@@ -87,12 +88,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
         },
         api: {
             bindevent: function () {
-                $(document).on("change", "#c-type", function () {
+                /* $(document).on("change", "#c-type", function () {
                     $("#c-pid option[data-type='all']").prop("selected", true);
                     $("#c-pid option").removeClass("hide");
                     $("#c-pid option[data-type!='" + $(this).val() + "'][data-type!='all']").addClass("hide");
                     $("#c-pid").data("selectpicker") && $("#c-pid").selectpicker("refresh");
-                });
+                }); */
                 Form.api.bindevent($("form[role=form]"));
             }
         }

@@ -1,0 +1,110 @@
+{include file="common/head" /}
+    <!-- END 头部结束 -->
+    <div class="wrap">
+        <div class="container w1140 mt-70">
+            <div class="project-content">
+                <div class="project-filtrate">
+
+                    <div class="item-filtrate pro-filtrate__item1">
+                        <ul>
+
+                            {foreach $level_one as $k=>$v}
+                                <li class="{$k==0?'on':''}">
+                                    <a href="javascript:;" data-id="proFiltrate{$v.id}">
+                                        {if condition="$language == 'cn'"}
+                                            {$v.name}
+                                        {else /}
+                                            {$v.en_name}   
+                                        {/if}
+                                    </a>
+                                </li>
+                            {/foreach}
+                         
+                        </ul>
+                    </div>
+                    <div class="item-filtrate pro-filtrate__item2">
+                        {foreach $level_two as $ks=>$v}
+                        <div class="item-fil__list2" id="proFiltrate{$v.pid}" style="">
+                            <ul>
+                                <li class="{$ks==0?'on':''}">
+                                    <a href="javascript:;">
+                                        {if condition="$language == 'cn'"}
+                                            {$v.name}
+                                        {else /}
+                                            {$v.en_name}   
+                                        {/if}
+
+                                        {$v.id}
+                                        <i class="icon-ra"></i>
+                                    </a>
+                                    <div class="item-hidden__html">
+                                        <ul>
+                                            {foreach $pr_list[$v.id]??[] as $kss=>$vo}
+                                            <li class="{$kss==0?'on':''}">
+                                                <a href="javascript:;" data-url="/project/179.html">
+                                                    <div class="item-pic">
+                                                        <img class="lazyload" src="{$vo.image}" data-original="{$vo.image}" alt="">
+                                                    </div>
+                                                    <div class="item-title">{$vo.title}</div>
+                                                </a>
+                                            </li>
+                                            {/foreach}
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        {/foreach}
+                     
+                    </div>
+
+                    <div class="item-filtrate pro-filtrate__item3">
+                        <ul>
+                            <li class="on">
+                                <a href="javascript:;" data-url="/project/34.html">
+                                    <div class="item-pic">
+                                        <img class="lazyload" src="__CDN__/assets/img/images/grey.gif" data-original="/media/upload/project/nchqc-Fxx.jpg" alt="">
+                                    </div>
+                                    <div class="item-title">南昌华侨城万科世纪水岸—湖山别墅</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="oriented-right__arrow">
+                    <i class="icon-ra"></i><i class="icon-ra"></i>
+                </div>
+
+                <div class="project-fancybook"></div>
+
+                <div class="project-show__bgPic">
+                    <a href="javascript:;" data-url="/project/34.html">
+                        <img class="lazyload" src="images/nchqc-Fxx.jpg" data-original="/media/upload/project/nchqc-Fxx.jpg" alt="" style="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- START 底部开始 -->
+        {include file="common/foot" /}
+        <!-- END 底部结束 -->
+    </div>
+    {include file="common/script" /}
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    </script>
+
+</body>
+
+</html>

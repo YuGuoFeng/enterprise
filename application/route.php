@@ -14,7 +14,9 @@ Route::group('cn',function(){
     // 首页
     Route::get('/index','html/index/index');
 
-    // 单页面
+    // COMPANY  品牌介绍
     Route::get('/company/list/:id','html/company/index');
+    // PROJECT 室内设计
 
+    Route::get('/project/list','html/company/projectList');
 });

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"/var/www/enterprise/public/../application/admin/view/category/edit.html";i:1637503698;s:62:"/var/www/enterprise/application/admin/view/layout/default.html";i:1633945806;s:59:"/var/www/enterprise/application/admin/view/common/meta.html";i:1633945806;s:61:"/var/www/enterprise/application/admin/view/common/script.html";i:1633945806;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:87:"/var/www/enterprise/public/../application/admin/view/text/project/projectlist/edit.html";i:1637597688;s:62:"/var/www/enterprise/application/admin/view/layout/default.html";i:1633945806;s:59:"/var/www/enterprise/application/admin/view/common/meta.html";i:1633945806;s:61:"/var/www/enterprise/application/admin/view/common/script.html";i:1633945806;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -60,122 +60,81 @@
                             <?php endif; ?>
                             <div class="content">
                                 <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
-    <?php echo token(); ?>
-    <div class="form-group">
-        <label for="c-type" class="control-label col-xs-12 col-sm-2"><?php echo __('Type'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-
-            <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[type]">
-                <?php if(is_array($typeList) || $typeList instanceof \think\Collection || $typeList instanceof \think\Paginator): if( count($typeList)==0 ) : echo "" ;else: foreach($typeList as $key=>$vo): ?>
-                <option value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['type'])?$row['type']:explode(',',$row['type']))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-            </select>
-
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="c-pid" class="control-label col-xs-12 col-sm-2"><?php echo __('Pid'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-
-            <select id="c-pid" data-rule="required" class="form-control selectpicker" name="row[pid]">
-                <?php if(is_array($parentList) || $parentList instanceof \think\Collection || $parentList instanceof \think\Paginator): if( count($parentList)==0 ) : echo "" ;else: foreach($parentList as $key=>$vo): ?>
-                <option data-type="<?php echo $vo['type']; ?>" class="<?php echo $vo['type']==$row['type']||$vo['type']=='all'?'':'hide'; ?>" value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['pid'])?$row['pid']:explode(',',$row['pid']))): ?>selected<?php endif; ?>><?php echo $vo['name']; ?></option>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-            </select>
-
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="c-name" class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-name"  class="form-control" name="row[name]" type="text" value="<?php echo htmlentities($row['name']); ?>">
-        </div>
-    </div>
-
-    
 
     <div class="form-group">
-        <label for="c-en_name" class="control-label col-xs-12 col-sm-2"><?php echo __('EnName'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Type'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-en_name"  class="form-control" name="row[en_name]" type="text" value="<?php echo htmlentities($row['en_name']); ?>">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="c-keywords" class="control-label col-xs-12 col-sm-2"><?php echo __('Keywords'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-keywords" class="form-control" name="row[keywords]" type="text" value="<?php echo htmlentities($row['keywords']); ?>">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="c-en_keywords" class="control-label col-xs-12 col-sm-2"><?php echo __('EnKeywords'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-en_keywords" class="form-control" name="row[en_keywords]" type="text" value="<?php echo htmlentities($row['en_keywords']); ?>">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="c-image" class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <div class="input-group">
-                <input id="c-image" class="form-control" size="35" name="row[image]" type="text" value="<?php echo $row['image']; ?>">
-                <div class="input-group-addon no-border no-padding">
-                    <span><button type="button" id="faupload-image" class="btn btn-danger faupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
-                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
-                </div>
-                <span class="msg-box n-right"></span>
+            <div class="form-inline" data-toggle="cxselect" data-selects="first,second">
+                <select class="first form-control" data-rule="required" name="row[first_id]" data-url="ajax/projectType?pid=0">
+                    <option value="<?php echo $row['first_id']; ?>" selected=""></option>
+                </select>
+                <select class="second form-control" data-rule="required" name="row[second_id]" data-url="ajax/projectType" data-query-name="pid">
+                    <option value="<?php echo $row['second_id']; ?>" selected=""></option>
+                </select>
             </div>
-            <ul class="row list-inline faupload-preview" id="p-image"></ul>
         </div>
     </div>
 
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Title'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="<?php echo htmlentities($row['title']); ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image_type_id'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-image_type_id"  data-source="text/image/image_type/index" class="form-control selectpage" name="row[image_type_id]" type="text" value="<?php echo htmlentities($row['image_type_id']); ?>">
+        </div>
+    </div>
+    <!-- <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Description'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-description" class="form-control" name="row[description]" type="text" value="<?php echo htmlentities($row['description']); ?>">
+        </div>
+    </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Content'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <textarea id="c-content" class="form-control editor" rows="5" name="row[content]" cols="50"><?php echo htmlentities($row['content']); ?></textarea>
         </div>
+    </div> -->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-image" class="form-control" size="50" name="row[image]" type="text" value="<?php echo htmlentities($row['image']); ?>">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-image" class="btn btn-danger faupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
+                </div>
+                <span class="msg-box n-right" for="c-image"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-image"></ul>
+        </div>
     </div>
+    <div class="form-group">
+        <label for="c-language" class="control-label col-xs-12 col-sm-2"><?php echo __('Language'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
 
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('EnContent'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <textarea id="c-en_content" class="form-control editor" rows="5" name="row[en_content]" cols="50"><?php echo htmlentities($row['en_content']); ?></textarea>
+            <select id="c-language" data-rule="required" class="form-control selectpicker" name="row[language]">
+                <?php if(is_array($language) || $language instanceof \think\Collection || $language instanceof \think\Paginator): if( count($language)==0 ) : echo "" ;else: foreach($language as $key=>$vo): ?>
+                <option value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['language'])?$row['language']:explode(',',$row['language']))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>
         </div>
     </div>
-    
     <div class="form-group">
-        <label for="c-url" class="control-label col-xs-12 col-sm-2"><?php echo __('Url'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-url"  class="form-control" name="row[url]" type="text" value="<?php echo htmlentities($row['url']); ?>">
+            <input id="c-weigh" data-rule="required" class="form-control" name="row[weigh]" type="number" value="<?php echo htmlentities($row['weigh']); ?>">
         </div>
     </div>
-
-    <div class="form-group">
-        <label for="c-list_type" class="control-label col-xs-12 col-sm-2"><?php echo __('ListType'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-list_type"  class="form-control" name="row[list_type]" type="text" value="<?php echo htmlentities($row['list_type']); ?>">
-        </div>
-    </div>
-    
-    <div class="form-group">
-        <label for="c-weigh" class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="<?php echo $row['weigh']; ?>">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Nav'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <?php echo build_radios('row[nav]', [0=>__('Nav 0'), 1=>__('Nav 1')], $row['nav']); ?>
-        </div>
-    </div>
-
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <?php echo build_radios('row[status]', ['normal'=>__('Normal'), 'hidden'=>__('Hidden')], $row['status']); ?>
+            <!-- <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="<?php echo htmlentities($row['status']); ?>"> -->
+            <?php echo build_radios('row[status]', [0=>__('Status 0'), 1=>__('Status 1')],$row['status']); ?>
         </div>
     </div>
     <div class="form-group layer-footer">

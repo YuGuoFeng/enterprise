@@ -6,11 +6,12 @@
 
         <div class="container w1140 mt-70">
             <div class="page-column__title">
-                <div class="etitle fs36">COMPANY</div>
+                <div class="etitle fs36">{$list.0.en_name??''}</div>
                 <i class="line"></i>
-                <div class="ctitle fs24">品牌介绍</div>
+                {if condition="$language == 'cn'"}
+                    <div class="ctitle fs24">{$list.0.name??''}</div>
+                {/if}
             </div>
-
 
             <div class="company-intro__full mt-30">
                 <div class="item-cont">
@@ -18,430 +19,105 @@
                         <img class="lazyload" src="__CDN__/assets/img/images/grey.gif" data-original="__CDN__/assets/img/images/COMPANY-001.jpg" alt="">
                     </div>
                     <div class="item-text sec-txt wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
-                        <p><br>
-                            <strong>LSD Interior Design</strong></p>
 
-                        <p><br> 以设计师葛亚曦先生为首的先锋设计师团体，
-                        </p>
-
-                        <p>于深圳、上海，双中心运营发展设计。</p>
-
-                        <p>主营业务聚焦地产行业的室内空间的整体解决方案业务，</p>
-
-                        <p>19年业务延展至商业空间、酒店设计、高定私宅。</p>
-
-                        <p>十四年来，引领中国设计的前沿视角，不断打造经典设计作品，</p>
-
-                        <p>屡获国内外设计⼤奖，如加拿⼤AZ、德国红点产品设计、法国DNA、</p>
-
-                        <p>英国安德⻢丁、美国建筑⼤师设计、DFA亚洲最具影响⼒等。</p>
-
-                        <p>持续引领⾼端居住审美，推动⻛格迭代，</p>
-
-                        <p>成为中国室内设计标杆企业。</p>
-
-                        <p>&nbsp;</p>
+                        {if condition="$language == 'cn'"}
+                            {$list.0.content}
+                        {else /}
+                            {$list.0.en_content}   
+                        {/if}
 
                     </div>
                 </div>
 
                 <div class="item-larze__pic item-pic wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <img class="lazyload" src="__CDN__/assets/img/images/COMPANY-001.jpg" data-original="__CDN__/assets/img/images/COMPANY-001.jpg">
+                    <img class="lazyload" src="{$list.0.image??''}" data-original="{$list.0.image??''}">
                 </div>
             </div>
 
+
+            
+
             <div class="company-founder__full mt-100">
                 <div class="item-pic wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <img class="lazyload" src="__CDN__/assets/img/images/FOUNDER-001.jpg" data-original="__CDN__/assets/img/images/FOUNDER-001.jpg">
+                    <img class="lazyload" src="{$list.1.image??''}" data-original="{$list.1.image??''}">
                 </div>
                 <div class="item-cont wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
                     <div class="page-column__title">
-                        <div class="etitle fs36">FOUNDER</div>
+                        <div class="etitle fs36">{$list.1.en_name??''}</div>
                         <i class="line"></i>
-                        <div class="ctitle fs24">创始人介绍</div>
+                        {if condition="$language == 'cn'"}
+                            <div class="ctitle fs24">{$list.0.name??''}</div>
+                        {/if}
                     </div>
-                    <div class="item-caption fs24 mt-60">葛亚曦</div>
+                    {if condition="$language == 'cn'"}
+                        <div class="item-caption fs24 mt-60">{$list.1.keywords??''}</div>
+                    {else /}
+                        <div class="item-caption fs24 mt-60">{$list.1.en_keywords??''}</div>
+                    {/if}
+                    
                     <div class="item-text sec-txt mt-30">
-                        <p>LSD&amp;再造 创始人兼艺术总监</p>
-
-                        <p>深圳室内设计协会轮值会长</p>
-
-                        <p>深圳室内建筑设计行业协会副会长</p>
-
-                        <p>清华大学软装与陈列设计高级研修班客座教授</p>
-
-                        <p>同济大学室内设计与软装高级研修班客座教授</p>
+                        {if condition="$language == 'cn'"}
+                            {$list.1.content}
+                        {else /}
+                            {$list.1.en_content}   
+                        {/if}
 
                     </div>
                 </div>
             </div>
 
             <div class="company-culture__full mt-150">
+         
                 <div class="page-column__title">
-                    <div class="etitle fs36">COMPANY CULTURE</div>
+                    <div class="etitle fs36">{$list.2.en_name??''}</div>
                     <i class="line"></i>
-                    <div class="ctitle fs24">企业文化</div>
+                    {if condition="$language == 'cn'"}
+                        <div class="ctitle fs24">{$list.2.name??''}</div>
+                    {/if}
                 </div>
                 <div class="company-culture__list mt-80">
                     <ul class="list list-2">
-                        <li class="wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                            <div class="item-box">
-                                <div class="item-hint fs24">愿景</div>
-                                <div class="item-caption sec-txt">
-                                    我们事业存在的价值？
-                                </div>
-                                <div class="item-txt sec-txt">
-                                    <p>成为引领中国人居审美和改变未来人们生活方式的具有全球影响力的企业</p>
+                        {assign name="num" value="0.1" /}
+                        {foreach $culture as $k=>$v}
 
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                            <div class="item-box">
-                                <div class="item-hint fs24">使命</div>
-                                <div class="item-caption sec-txt">
-                                    我们要去哪里，达到什么目标？
-                                </div>
-                                <div class="item-txt sec-txt">
-                                    <p>用设计引领中国人居审美</p>
+                            <li class="wow fadeInUp" data-wow-delay="{$num+(0.2 * $k)}s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                                <div class="item-box">
+                                    <div class="item-hint fs24">{$v.title}</div>
+                                    <div class="item-caption sec-txt">
+                                        {$v.description}
+                                    </div>
+                                    <div class="item-txt sec-txt">
+                                        {$v.content}
 
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                            <div class="item-box">
-                                <div class="item-hint fs24">文化 丨 价值观</div>
-                                <div class="item-caption sec-txt">
-                                    我们信奉什么？
-                                </div>
-                                <div class="item-txt sec-txt">
-                                    <p>客户为中心创造价值<br> 坚持绝对的坦诚
-                                        <br> 永远都有更好的解决方案
-                                        <br> 共担共享 信仰奋斗<br> 彼此独立但共同成长
-                                        <br> 用责任赢得信任，用自律换取自由
-                                    </p>
-
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        {/foreach}
                     </ul>
                 </div>
             </div>
 
             <div class="company-partner__full mt-60">
+       
                 <div class="page-column__title">
-                    <div class="etitle fs36">PARTNER</div>
+                    <div class="etitle fs36">{$list.3.en_name??''}</div>
                     <i class="line"></i>
-                    <div class="ctitle fs24">合作伙伴</div>
+                    {if condition="$language == 'cn'"}
+                        <div class="ctitle fs24">{$list.2.name??''}</div>
+                    {/if}
                 </div>
-
                 <div class="company-partner__list mt-60">
                     <ul>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-1xx.jpg" data-original="__CDN__/assets/img/images/partners-1xx.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-2x.jpg" data-original="__CDN__/assets/img/images/partners-2x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-3x.jpg" data-original="__CDN__/assets/img/images/partners-3x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-4x.jpg" data-original="__CDN__/assets/img/images/partners-4x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-5x.jpg" data-original="__CDN__/assets/img/images/partners-5x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-6x.jpg" data-original="__CDN__/assets/img/images/partners-6x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-7x.jpg" data-original="__CDN__/assets/img/images/partners-7x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-8x.jpg" data-original="__CDN__/assets/img/images/partners-8x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-9x.jpg" data-original="__CDN__/assets/img/images/partners-9x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-10x.jpg" data-original="__CDN__/assets/img/images/partners-10x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-11x.jpg" data-original="__CDN__/assets/img/images/partners-11x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-12x.jpg" data-original="__CDN__/assets/img/images/partners-12x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-13X.jpg" data-original="__CDN__/assets/img/images/partners-13X.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-14x.jpg" data-original="__CDN__/assets/img/images/partners-14x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-15x.jpg" data-original="__CDN__/assets/img/images/partners-15x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-16x.jpg" data-original="__CDN__/assets/img/images/partners-16x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-17x.jpg" data-original="__CDN__/assets/img/images/partners-17x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-18x.jpg" data-original="__CDN__/assets/img/images/partners-18x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-19x.jpg" data-original="__CDN__/assets/img/images/partners-19x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-20x.jpg" data-original="__CDN__/assets/img/images/partners-20x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-21x.jpg" data-original="__CDN__/assets/img/images/partners-21x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-22x.jpg" data-original="__CDN__/assets/img/images/partners-22x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-23x.jpg" data-original="__CDN__/assets/img/images/partners-23x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-24x.jpg" data-original="__CDN__/assets/img/images/partners-24x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-25x.jpg" data-original="__CDN__/assets/img/images/partners-25x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-26x.jpg" data-original="__CDN__/assets/img/images/partners-26x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-27x.jpg" data-original="__CDN__/assets/img/images/partners-27x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-28x.jpg" data-original="__CDN__/assets/img/images/partners-28x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-29x.jpg" data-original="__CDN__/assets/img/images/partners-29x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-30x.jpg" data-original="__CDN__/assets/img/images/partners-30x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-31x.jpg" data-original="__CDN__/assets/img/images/partners-31x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-32x.jpg" data-original="__CDN__/assets/img/images/partners-32x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-33x.jpg" data-original="__CDN__/assets/img/images/partners-33x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-34x.jpg" data-original="__CDN__/assets/img/images/partners-34x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-35xx.jpg" data-original="__CDN__/assets/img/images/partners-35xx.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-36x.jpg" data-original="__CDN__/assets/img/images/partners-36x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-37x.jpg" data-original="__CDN__/assets/img/images/partners-37x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-38x.jpg" data-original="__CDN__/assets/img/images/partners-38x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-39x.jpg" data-original="__CDN__/assets/img/images/partners-39x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-40x.jpg" data-original="__CDN__/assets/img/images/partners-40x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-41x.jpg" data-original="__CDN__/assets/img/images/partners-41x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-42x.jpg" data-original="__CDN__/assets/img/images/partners-42x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-43x.jpg" data-original="__CDN__/assets/img/images/partners-43x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-44x.jpg" data-original="__CDN__/assets/img/images/partners-44x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-45x.jpg" data-original="__CDN__/assets/img/images/partners-45x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-46x.jpg" data-original="__CDN__/assets/img/images/partners-46x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-47x.jpg" data-original="__CDN__/assets/img/images/partners-47x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-48x.jpg" data-original="__CDN__/assets/img/images/partners-48x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-49x.jpg" data-original="__CDN__/assets/img/images/partners-49x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-50x.jpg" data-original="__CDN__/assets/img/images/partners-50x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-51x.jpg" data-original="__CDN__/assets/img/images/partners-51x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-52x.jpg" data-original="__CDN__/assets/img/images/partners-52x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-53x.jpg" data-original="__CDN__/assets/img/images/partners-53x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-54x.jpg" data-original="__CDN__/assets/img/images/partners-54x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-55x.jpg" data-original="__CDN__/assets/img/images/partners-55x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-56x.jpg" data-original="__CDN__/assets/img/images/partners-56x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-57x.jpg" data-original="__CDN__/assets/img/images/partners-57x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-58x.jpg" data-original="__CDN__/assets/img/images/partners-58x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-59x.jpg" data-original="__CDN__/assets/img/images/partners-59x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-60x.jpg" data-original="__CDN__/assets/img/images/partners-60x.jpg">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-pic">
-                                <img class="lazyload" src="__CDN__/assets/img/images/partners-61x.jpg" data-original="__CDN__/assets/img/images/partners-61x.jpg">
-                            </div>
-                        </li>
+                        {foreach $partners_list as $k=>$v}
+                            <li>
+                                <div class="item-pic">
+                                    <img class="lazyload" src="{$v.image}" data-original="{$v.image}">
+                                </div>
+                            </li>
+                        {/foreach}
+                       
+                       
+                        
                     </ul>
                 </div>
             </div>
@@ -454,20 +130,9 @@
 
 
         <!-- START 底部开始 -->
-        <footer>
-            <div class="footer">
-                <div class="footer-main">
-                    <div class="copyright">
-                        <a href="https://beian.miit.gov.cn/" target="_blank">
-                                ©2021再造 粤ICP备18001316号-1 Designed By ZAIZAO
-                            </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        {include file="common/foot" /}
 
-        <div class="foot-fix"></div>
-        <div class="foot-place"></div>
+       
         <!-- END 底部结束 -->
     </div>
     {include file="common/script" /}
