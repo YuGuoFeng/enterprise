@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"/var/www/enterprise/public/../application/html/view/index/index.html";i:1637501496;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637495485;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637502489;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637495808;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"/var/www/enterprise/public/../application/html/view/index/index.html";i:1637501496;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637769707;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
@@ -45,8 +45,8 @@
 
             <div class="head-handle">
                 <div class="head-lang">
-                    <a href="###">EN</a>
-                    <a href="javascript:;" class="on">CN</a>
+                    <a href="/en/index"  class="<?php echo $language=='en'?'on':''; ?>">EN</a>
+                    <a href="/cn/index" class="<?php echo $language=='cn'?'on':''; ?>">CN</a>
                 </div>
 
 
@@ -99,7 +99,7 @@
                             <ul>
                                 <?php foreach($vo['child'] as $co): ?>
                                 <li>
-                                    <a href="###"><?php echo $co['name']; ?></a>
+                                    <a href="/<?php echo $language; ?>/<?php echo $co['url']; ?>/<?php echo $co['id']; ?>"><?php echo $co['name']; ?></a>
                                 </li>
                                 <?php endforeach; ?>
                             </ul>
@@ -177,6 +177,7 @@
 <script src="/assets/js/js/main.js"></script>
         <script src="/assets/js/js/swiper.min.js"></script>
         <script src="/assets/js/js/wow.min.js"></script>
+        <script src="/assets/js/js/jquery-2.2.3.min.js"></script>
        
 
 

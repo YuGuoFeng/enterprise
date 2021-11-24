@@ -5,13 +5,14 @@ use think\Controller;
 use app\common\model\Category as cm;
 use think\DB;
 use think\Request;
+use think\Config;
 class BackController extends Controller
 {   
 
     protected $auth = 'cn';
 
     public function _initialize(){
-
+        $site = Config::get("site");
         $request = Request::instance();
         $path = $request->path();
 
@@ -20,6 +21,7 @@ class BackController extends Controller
         $nav = collection(DB::name('category')->where(['status'=>'normal','nav'=>1])->order('weigh aes')->field('id,pid,name,en_name,url')->select())->toArray();
         $nav_list = $this->getTree($nav,0);
         $this->assign('nav_list',$nav_list);
+        $this->assign('site',$site);
         $this->assign('language',$this->auth);
 
 

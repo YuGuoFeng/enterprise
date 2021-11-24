@@ -1,0 +1,75 @@
+{include file="common/head" /}
+    <!-- END 头部结束 -->
+    <div class="wrap">
+        <div class="container w1140">
+            <div class="page-book__full mt-80">
+                <div class="page-column__title">
+                    <div class="etitle fs36">{$category.en_name??''}</div>
+                    
+                    {if condition="$language == 'cn'"}
+                        <i class="line"></i>
+                        <div class="ctitle fs24">{$category.name??''}</div>
+                    {/if}
+                </div>
+
+                <section class="page-new__list mt-60">
+                    <ul class="list list-3 js-content__list">
+                        {foreach $news_list as $v}
+                        <li>
+                            <a href="/{$language}/news/show/{$v.id}">
+                                <div class="item-pic__box">
+                                    <figure>
+                                        <img class="lazyload" src="{$v.image}" data-original="{$v.image}">
+                                        <div class="item-time fs18">{php}echo date('Y/m/d',$v['entry_time']);{/php}</div>
+                                    </figure>
+                                </div>
+                                <article>
+                                    <h1 class="item-title">{$v.title}</h1>
+                                </article>
+                            </a>
+                        </li>
+                        {/foreach}
+                        
+                    </ul>
+                </section>
+
+                <div class="list-paging d-none ajax-page">
+
+                </div>
+
+                <div class="list-loading">
+                    <i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="mt-100"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- START 底部开始 -->
+        {include file="common/foot" /}
+        <!-- END 底部结束 -->
+    </div>
+    {include file="common/script" /}
+
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    </script>
+
+</body>
+
+</html>

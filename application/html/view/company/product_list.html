@@ -1,0 +1,51 @@
+{include file="common/head" /}
+    <!-- END 头部结束 -->
+    <div class="wrap">
+        <div class="container w1140">
+            <div class="page-product__full mt-80">
+                <div class="page-column__title">
+                    <div class="etitle fs36">{$category.en_name??''}</div>
+                    
+                    {if condition="$language == 'cn'"}
+                        <i class="line"></i>
+                        <div class="ctitle fs24">{$category.name??''}</div>
+                    {/if}
+                </div>
+
+                <div class="page-product__list  mt-80">
+                    <ul class="list list-4">
+                        {foreach $product_list as $v}
+                        <li>
+                            <a href="{$v.url??'javascript:;'}">
+                                <div class="item-pic">
+                                    <img class="lazyload" src="{$v.image}" data-original="{$v.image}">
+                                </div>
+                            </a>
+                        </li>
+                        {/foreach}
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- START 底部开始 -->
+        {include file="common/foot" /}
+        <!-- END 底部结束 -->
+    </div>
+    {include file="common/script" /}
+
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    </script>
+
+</body>
+
+</html>

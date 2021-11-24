@@ -1,0 +1,81 @@
+{include file="common/head" /}
+    <!-- END 头部结束 -->
+    <div class="wrap">
+        <div class="container w800 mt-50">
+            <div class="nd-top__cont">
+                <div class="nd-caption">
+
+                    <a href="javascript:history.back(-1)" class="back-list pro-back__list">
+                        <i class="icon-back"></i><span>返回列表</span>
+                    </a>
+
+                    <div class="nd-title fs24">
+                        <h1>{$news_list.title??''}</h1>
+                    </div>
+                    <div class="nd-time sec-txt">{php} echo date('Y/m/d',$news_listv['entry_time']??0);  {/php}</div>
+                </div>
+
+                <div class="nd-share__full">
+                    <div class="nd-share__st">
+                        <i class="icon-share"></i>
+                    </div>
+
+                    <div class="nd-share__box social">
+                        <a href="javascript:;" class="icon-wx" data-share="weixin"></a>
+                        <a href="javascript:;" class="icon-wb" data-share="weibo"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-nd__inner paragraph mt-60">
+                <p><img alt="" src="{$news_list.image??''}" style="width: 800px; height: 450px;"></p>
+
+                <p>&nbsp;</p>
+                {$news_list.content??''}
+                <!-- <p><strong>LSD作品《西安方所》入围加拿大2021 AZ Awards决赛</strong></p>
+
+                <p>经过数月的追逐</p>
+
+                <p>西安方所成功从&nbsp;<strong>57&nbsp;</strong>个国家</p>
+
+                <p><strong>1209&nbsp;</strong>个参赛作品中突围而出</p>
+
+                <p>成为&nbsp;<strong>72&nbsp;</strong>个入围者之一</p>
+
+                <p>其中仅有&nbsp;<strong>5&nbsp;</strong>个中国项目进入入围名单</p>
+
+                <p>得奖率不足&nbsp;<strong>2%</strong></p> -->
+
+            </div>
+
+            <div class="mt-150"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- START 底部开始 -->
+        {include file="common/script" /}
+        <!-- END 底部结束 -->
+    </div>
+    {include file="common/foot" /}
+
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    </script>
+
+</body>
+
+</html>

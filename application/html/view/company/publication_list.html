@@ -1,0 +1,71 @@
+{include file="common/head" /}
+    <!-- END 头部结束 -->
+    <div class="wrap">
+        <div class="wrap">
+            <div class="container w1140">
+                <div class="page-book__full mt-80">
+                    <div class="page-column__title">
+                        <div class="etitle fs36">{$category.en_name??''}</div>
+                        
+                        {if condition="$language == 'cn'"}
+                            <i class="line"></i>
+                            <div class="ctitle fs24">{$category.name??''}</div>
+                        {/if}
+                    </div>
+
+                    <div class="page-book__list mt-60">
+                        <ul class="list list-4">
+                            {foreach $publication_list as $k=>$v}
+                            <li>
+                                <a class="item-btn" href="javascript:;">
+                                    <div class="item-pic">
+                                        <img class="lazyload" src="{$v.image}" data-original="{$v.image}" alt="" style="">
+                                    </div>
+                                    <div class="item-name">{$v.title}</div>
+                                </a>
+                                <div class="item-html">
+                                    {foreach $v.image_arr as $k=>$vo}
+                                    <a class="book-fancybox" rel="group" data-fancybox="gallery2" href="{$vo.image}"></a>
+                                    {/foreach}
+                                </div>
+                            </li>
+                            {/foreach}
+                            
+
+                        </ul>
+                    </div>
+
+                    <div class="list-paging d-none ajax-page">
+
+                    </div>
+
+                    <div class="list-loading">
+                        <i></i><i></i><i></i><i></i>
+                    </div>
+
+                    <div class="mt-100"></div>
+                </div>
+
+            </div>
+            <!-- START 底部开始 -->
+            {include file="common/foot" /}
+            <!-- END 底部结束 -->
+        </div>
+
+    </div>
+    {include file="common/script" /}
+
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    </script>
+
+</body>
+
+</html>

@@ -60,14 +60,16 @@
 
                     <div class="item-filtrate pro-filtrate__item3">
                         <ul>
-                            <li class="on">
-                                <a href="javascript:;" data-url="/project/34.html">
-                                    <div class="item-pic">
-                                        <img class="lazyload" src="__CDN__/assets/img/images/grey.gif" data-original="/media/upload/project/nchqc-Fxx.jpg" alt="">
-                                    </div>
-                                    <div class="item-title">南昌华侨城万科世纪水岸—湖山别墅</div>
-                                </a>
-                            </li>
+                            {foreach $pr_one_list as $kss=>$vo}
+                                <li class="on">
+                                    <a href="javascript:;" data-url="/project/34.html">
+                                        <div class="item-pic">
+                                            <img class="lazyload" src="{$vo.image??''}" data-original="{$vo.image??''}" alt="">
+                                        </div>
+                                        <div class="item-title">{$vo.title??''}</div>
+                                    </a>
+                                </li>
+                            {/foreach}
                         </ul>
                     </div>
                 </div>
@@ -80,7 +82,7 @@
 
                 <div class="project-show__bgPic">
                     <a href="javascript:;" data-url="/project/34.html">
-                        <img class="lazyload" src="images/nchqc-Fxx.jpg" data-original="/media/upload/project/nchqc-Fxx.jpg" alt="" style="">
+                        <img class="lazyload" src="{$pr_one_list.0.image??''}" data-original="{$pr_one_list.0.image??''}" alt="" style="">
                     </a>
                 </div>
             </div>

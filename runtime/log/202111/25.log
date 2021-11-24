@@ -1,0 +1,992 @@
+---------------------------------------------------------------
+[ 2021-11-25T00:01:49+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/en/product/list/18
+[运行时间：0.072233s] [吞吐率：13.84req/s] [内存消耗：359.08kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.012582s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000103s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'company',
+    2 => 'productList',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/en/join/list/20',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '18',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001398s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Company->productList[ /var/www/enterprise/application/html/controller/Company.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/company/product_list.html [ array (
+  0 => 'nav_list',
+  1 => 'language',
+  2 => 'category',
+  3 => 'product_list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:01:52+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/cn/index
+[运行时间：0.076145s] [吞吐率：13.13req/s] [内存消耗：388.07kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.015853s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000090s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/en/product/list/18',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001239s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Index->index[ /var/www/enterprise/application/html/controller/Index.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/index/index.html [ array (
+  0 => 'nav_list',
+  1 => 'language',
+  2 => 'banner_list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:00+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/cn/company/list/14
+[运行时间：0.072392s] [吞吐率：13.81req/s] [内存消耗：384.84kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009827s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000082s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'company',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/cn/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '14',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001093s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Company->index[ /var/www/enterprise/application/html/controller/Company.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/company/index.html [ array (
+  0 => 'nav_list',
+  1 => 'language',
+  2 => 'list',
+  3 => 'partners_list',
+  4 => 'culture',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:03+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/en/index
+[运行时间：0.063658s] [吞吐率：15.71req/s] [内存消耗：365.13kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000026s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013835s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000458s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/cn/company/list/14',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001214s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Index->index[ /var/www/enterprise/application/html/controller/Index.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/index/index.html [ array (
+  0 => 'nav_list',
+  1 => 'language',
+  2 => 'banner_list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:07+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/en/company/list/14
+[运行时间：0.064781s] [吞吐率：15.44req/s] [内存消耗：348.82kb] [文件加载：131]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.011538s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000069s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'company',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/en/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '14',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001351s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Company->index[ /var/www/enterprise/application/html/controller/Company.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/company/index.html [ array (
+  0 => 'nav_list',
+  1 => 'language',
+  2 => 'list',
+  3 => 'partners_list',
+  4 => 'culture',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:41+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/general/config?ref=addtabs
+[运行时间：0.054451s] [吞吐率：18.37req/s] [内存消耗：519.66kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016424s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000098s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001567s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000034s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:41+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/index/index
+[运行时间：0.040972s] [吞吐率：24.41req/s] [内存消耗：701.65kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006988s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000032s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000782s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /var/www/enterprise/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'language',
+  6 => 'menulist',
+  7 => 'navlist',
+  8 => 'fixedmenu',
+  9 => 'referermenu',
+  10 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000017s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:41+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/general/config?addtabs=1
+[运行时间：0.040027s] [吞吐率：24.98req/s] [内存消耗：526.65kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005587s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000066s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000836s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->index[ /var/www/enterprise/application/admin/controller/general/Config.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/admin/view/general/config/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'language',
+  6 => 'siteList',
+  7 => 'typeList',
+  8 => 'ruleList',
+  9 => 'groupList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000042s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:41+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/ajax/lang?callback=define&controllername=index&lang=zh-cn&v=1637769761&v=1637769761
+[运行时间：0.020416s] [吞吐率：48.98req/s] [内存消耗：237.97kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000009s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007866s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000146s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'lang' => 'zh-cn',
+  'v' => '1637769761',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000580s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /var/www/enterprise/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000008s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:41+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/ajax/lang?callback=define&controllername=general.config&lang=zh-cn&v=1637769761&v=1637769761
+[运行时间：0.021330s] [吞吐率：46.88req/s] [内存消耗：237.80kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000007s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005240s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.config',
+  'lang' => 'zh-cn',
+  'v' => '1637769761',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002271s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /var/www/enterprise/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000009s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:02:46+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/en/company/list/14
+[运行时间：0.078140s] [吞吐率：12.80req/s] [内存消耗：386.65kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013874s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000080s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'company',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/en/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '14',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001308s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Company->index[ /var/www/enterprise/application/html/controller/Company.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/company/index.html [ array (
+  0 => 'nav_list',
+  1 => 'language',
+  2 => 'list',
+  3 => 'partners_list',
+  4 => 'culture',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: site[/var/www/enterprise/runtime/temp/ca35d7e0df003bd95d5d47b054854337.php:18]
+---------------------------------------------------------------
+[ 2021-11-25T00:05:53+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/en/company/list/14
+[运行时间：0.078491s] [吞吐率：12.74req/s] [内存消耗：378.25kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000103s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.015355s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000104s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'company',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/en/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '14',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001354s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Company->index[ /var/www/enterprise/application/html/controller/Company.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/company/index.html [ array (
+  0 => 'nav_list',
+  1 => 'site',
+  2 => 'language',
+  3 => 'list',
+  4 => 'partners_list',
+  5 => 'culture',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:23+08:00 ] 172.17.0.1 POST www.guofengyu.net:10103/uMRVcxOfSN.php/general.config/edit
+[运行时间：0.090171s] [吞吐率：11.09req/s] [内存消耗：505.35kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.012653s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000140s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://www.guofengyu.net:10103',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '699',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+)
+[ info ] [ PARAM ] array (
+  '__token__' => 'f1601b52b69fe38ddcd59decf43d4827',
+  'row' => 
+  array (
+    'name' => 'LSD-再造集团-中国知名室内设计师葛亚曦',
+    'beian' => '©2021再造 粤ICP备18001316号-1 Designed By ZAIZAO',
+    'cdnurl' => '',
+    'version' => '1.0.4',
+    'timezone' => 'Asia/Shanghai',
+    'forbiddenip' => '',
+    'languages' => '{"backend":"zh-cn","frontend":"zh-cn"}',
+    'fixedpage' => 'general/config',
+  ),
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001155s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->edit[ /var/www/enterprise/application/admin/controller/general/Config.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005343s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:30+08:00 ] 172.17.0.1 POST www.guofengyu.net:10103/uMRVcxOfSN.php/general.config/edit
+[运行时间：0.082553s] [吞吐率：12.11req/s] [内存消耗：505.37kb] [文件加载：143]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.015031s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000079s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://www.guofengyu.net:10103',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '468',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+)
+[ info ] [ PARAM ] array (
+  '__token__' => '0c9fbd001f1f188fbdddc8dd36d462ff',
+  'row' => 
+  array (
+    'name' => 'LSD-再造集团-中国知名室内设计师葛亚曦',
+    'beian' => '©2021再造 粤ICP备18001316号-1 Designed By ZAIZAO',
+    'cdnurl' => '',
+    'version' => '1.0.4',
+    'timezone' => 'Asia/Shanghai',
+    'forbiddenip' => '',
+    'languages' => '{}',
+    'fixedpage' => 'general/config',
+  ),
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001097s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->edit[ /var/www/enterprise/application/admin/controller/general/Config.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005222s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:38+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/general/config?ref=addtabs
+[运行时间：0.051090s] [吞吐率：19.57req/s] [内存消耗：520.05kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.011196s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000078s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001377s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000033s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:38+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/index/index
+[运行时间：0.033667s] [吞吐率：29.70req/s] [内存消耗：701.65kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000108s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005425s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000032s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000736s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /var/www/enterprise/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'language',
+  6 => 'menulist',
+  7 => 'navlist',
+  8 => 'fixedmenu',
+  9 => 'referermenu',
+  10 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000019s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:38+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/general/config?addtabs=1
+[运行时间：0.034909s] [吞吐率：28.65req/s] [内存消耗：526.70kb] [文件加载：141]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004102s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000042s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000580s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->index[ /var/www/enterprise/application/admin/controller/general/Config.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/admin/view/general/config/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'language',
+  6 => 'siteList',
+  7 => 'typeList',
+  8 => 'ruleList',
+  9 => 'groupList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000055s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:38+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/ajax/lang?callback=define&controllername=index&lang=zh-cn&v=1637769998&v=1637769998
+[运行时间：0.020759s] [吞吐率：48.17req/s] [内存消耗：237.97kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005357s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000061s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'lang' => 'zh-cn',
+  'v' => '1637769998',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000669s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /var/www/enterprise/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000010s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:38+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/uMRVcxOfSN.php/ajax/lang?callback=define&controllername=general.config&lang=zh-cn&v=1637769998&v=1637769998
+[运行时间：0.028524s] [吞吐率：35.06req/s] [内存消耗：237.80kb] [文件加载：136]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010214s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000031s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.config',
+  'lang' => 'zh-cn',
+  'v' => '1637769998',
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001749s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /var/www/enterprise/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /var/www/enterprise/public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000008s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2021-11-25T00:06:59+08:00 ] 172.17.0.1 GET www.guofengyu.net:10103/en/company/list/14
+[运行时间：0.064236s] [吞吐率：15.57req/s] [内存消耗：378.23kb] [文件加载：133]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.011675s ]
+[ info ] [ LANG ] /var/www/enterprise/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000104s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'html',
+    1 => 'company',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=28agt28ruoopgvp1ur2ndocbcg; think_var=zh-cn; uid=1; token=ed723aab-8ec4-4c2e-9f04-f27b700623f8; admin_username=guoyu1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.guofengyu.net:10103/en/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.guofengyu.net:10103',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '14',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000834s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\html\controller\Company->index[ /var/www/enterprise/application/html/controller/Company.php ]
+[ info ] [ VIEW ] /var/www/enterprise/public/../application/html/view/company/index.html [ array (
+  0 => 'nav_list',
+  1 => 'site',
+  2 => 'language',
+  3 => 'list',
+  4 => 'partners_list',
+  5 => 'culture',
+) ]
+[ info ] [ LOG ] INIT File

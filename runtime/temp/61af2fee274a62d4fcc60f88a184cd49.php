@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"/var/www/enterprise/public/../application/html/view/company/project_list.html";i:1637678636;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637495485;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637594279;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637495808;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:81:"/var/www/enterprise/public/../application/html/view/company/publication_list.html";i:1637684723;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637495485;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637594279;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
 
@@ -116,94 +116,53 @@
 <!-- END 头部结束 -->
     <!-- END 头部结束 -->
     <div class="wrap">
-        <div class="container w1140 mt-70">
-            <div class="project-content">
-                <div class="project-filtrate">
-
-                    <div class="item-filtrate pro-filtrate__item1">
-                        <ul>
-
-                            <?php foreach($level_one as $k=>$v): ?>
-                                <li class="<?php echo $k==0?'on':''; ?>">
-                                    <a href="javascript:;" data-id="proFiltrate<?php echo $v['id']; ?>">
-                                        <?php if($language == 'cn'): ?>
-                                            <?php echo $v['name']; else: ?>
-                                            <?php echo $v['en_name']; endif; ?>
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
-                         
-                        </ul>
+        <div class="wrap">
+            <div class="container w1140">
+                <div class="page-book__full mt-80">
+                    <div class="page-column__title">
+                        <div class="etitle fs36"><?php echo isset($category['en_name'])?$category['en_name']:''; ?></div>
+                        <i class="line"></i>
+                        <?php if($language == 'cn'): ?>
+                            <div class="ctitle fs24"><?php echo isset($category['name'])?$category['name']:''; ?></div>
+                        <?php endif; ?>
                     </div>
-                    <div class="item-filtrate pro-filtrate__item2">
-                        <?php foreach($level_two as $ks=>$v): ?>
-                        <div class="item-fil__list2" id="proFiltrate<?php echo $v['pid']; ?>" style="">
-                            <ul>
-                                <li class="<?php echo $ks==0?'on':''; ?>">
-                                    <a href="javascript:;">
-                                        <?php if($language == 'cn'): ?>
-                                            <?php echo $v['name']; else: ?>
-                                            <?php echo $v['en_name']; endif; ?>
 
-                                        <?php echo $v['id']; ?>
-                                        <i class="icon-ra"></i>
-                                    </a>
-                                    <div class="item-hidden__html">
-                                        <ul>
-                                            <?php foreach($pr_list[$v['id']]??[] as $kss=>$vo): ?>
-                                            <li class="<?php echo $kss==0?'on':''; ?>">
-                                                <a href="javascript:;" data-url="/project/179.html">
-                                                    <div class="item-pic">
-                                                        <img class="lazyload" src="<?php echo $vo['image']; ?>" data-original="<?php echo $vo['image']; ?>" alt="">
-                                                    </div>
-                                                    <div class="item-title"><?php echo $vo['title']; ?></div>
-                                                </a>
-                                            </li>
-                                            <?php endforeach; ?>
-                                        </ul>
+                    <div class="page-book__list mt-60">
+                        <ul class="list list-4">
+                            <?php foreach($publication_list as $k=>$v): ?>
+                            <li>
+                                <a class="item-btn" href="javascript:;">
+                                    <div class="item-pic">
+                                        <img class="lazyload" src="<?php echo $v['image']; ?>" data-original="<?php echo $v['image']; ?>" alt="" style="">
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <?php endforeach; ?>
-                     
-                    </div>
-
-                    <div class="item-filtrate pro-filtrate__item3">
-                        <ul>
-                            <?php foreach($pr_one_list as $kss=>$vo): ?>
-                                <li class="on">
-                                    <a href="javascript:;" data-url="/project/34.html">
-                                        <div class="item-pic">
-                                            <img class="lazyload" src="<?php echo isset($vo['image'])?$vo['image']:''; ?>" data-original="<?php echo isset($vo['image'])?$vo['image']:''; ?>" alt="">
-                                        </div>
-                                        <div class="item-title"><?php echo isset($vo['title'])?$vo['title']:''; ?></div>
-                                    </a>
-                                </li>
+                                    <div class="item-name"><?php echo $v['title']; ?></div>
+                                </a>
+                                <div class="item-html">
+                                    <?php foreach($v['image_arr'] as $k=>$vo): ?>
+                                    <a class="book-fancybox" rel="group" data-fancybox="gallery2" href="<?php echo $vo['image']; ?>"></a>
+                                    <?php endforeach; ?>
+                                </div>
+                            </li>
                             <?php endforeach; ?>
+                            
+
                         </ul>
                     </div>
+
+                    <div class="list-paging d-none ajax-page">
+
+                    </div>
+
+                    <div class="list-loading">
+                        <i></i><i></i><i></i><i></i>
+                    </div>
+
+                    <div class="mt-100"></div>
                 </div>
 
-                <div class="oriented-right__arrow">
-                    <i class="icon-ra"></i><i class="icon-ra"></i>
-                </div>
-
-                <div class="project-fancybook"></div>
-
-                <div class="project-show__bgPic">
-                    <a href="javascript:;" data-url="/project/34.html">
-                        <img class="lazyload" src="<?php echo isset($pr_one_list['0']['image'])?$pr_one_list['0']['image']:''; ?>" data-original="<?php echo isset($pr_one_list['0']['image'])?$pr_one_list['0']['image']:''; ?>" alt="" style="">
-                    </a>
-                </div>
             </div>
-        </div>
-
-
-
-
-        <!-- START 底部开始 -->
-        
+            <!-- START 底部开始 -->
+            
 
 <footer>
     <div class="footer">
@@ -219,12 +178,16 @@
 
 <div class="foot-fix"></div>
 <div class="foot-place"></div>
-        <!-- END 底部结束 -->
+            <!-- END 底部结束 -->
+        </div>
+
     </div>
     <script src="/assets/js/js/main.js"></script>
         <script src="/assets/js/js/swiper.min.js"></script>
         <script src="/assets/js/js/wow.min.js"></script>
+        <script src="/assets/js/js/jquery-2.2.3.min.js"></script>
        
+
     <script type="text/javascript">
         var wow = new WOW({
             boxClass: 'wow',

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"/var/www/enterprise/public/../application/admin/view/category/edit.html";i:1637503698;s:62:"/var/www/enterprise/application/admin/view/layout/default.html";i:1633945806;s:59:"/var/www/enterprise/application/admin/view/common/meta.html";i:1633945806;s:61:"/var/www/enterprise/application/admin/view/common/script.html";i:1633945806;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"/var/www/enterprise/public/../application/admin/view/category/edit.html";i:1637767369;s:62:"/var/www/enterprise/application/admin/view/layout/default.html";i:1633945806;s:59:"/var/www/enterprise/application/admin/view/common/meta.html";i:1633945806;s:61:"/var/www/enterprise/application/admin/view/common/script.html";i:1633945806;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="c-keywords" class="control-label col-xs-12 col-sm-2"><?php echo __('Keywords'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-keywords" class="form-control" name="row[keywords]" type="text" value="<?php echo htmlentities($row['keywords']); ?>">
@@ -113,7 +113,7 @@
         <div class="col-xs-12 col-sm-8">
             <input id="c-en_keywords" class="form-control" name="row[en_keywords]" type="text" value="<?php echo htmlentities($row['en_keywords']); ?>">
         </div>
-    </div>
+    </div> -->
 
     <div class="form-group">
         <label for="c-image" class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
@@ -151,12 +151,12 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="c-list_type" class="control-label col-xs-12 col-sm-2"><?php echo __('ListType'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-list_type"  class="form-control" name="row[list_type]" type="text" value="<?php echo htmlentities($row['list_type']); ?>">
         </div>
-    </div>
+    </div> -->
     
     <div class="form-group">
         <label for="c-weigh" class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>

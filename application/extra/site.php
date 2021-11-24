@@ -1,16 +1,14 @@
 <?php
 
 return array (
-  'name' => '我的网站',
-  'beian' => '',
+  'name' => 'LSD-再造集团-中国知名室内设计师葛亚曦',
+  'beian' => '©2021再造 粤ICP备18001316号-1 Designed By ZAIZAO',
   'cdnurl' => '',
   'version' => '1.0.4',
   'timezone' => 'Asia/Shanghai',
   'forbiddenip' => '',
   'languages' => 
   array (
-    'backend' => 'zh-cn',
-    'frontend' => 'zh-cn',
   ),
   'fixedpage' => 'general/config',
   'categorytype' => 

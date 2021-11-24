@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/var/www/enterprise/public/../application/html/view/company/index.html";i:1637593651;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637495485;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637502489;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637593632;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637495808;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/var/www/enterprise/public/../application/html/view/company/index.html";i:1637769606;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637769949;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637769978;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
 
@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>LSD-再造集团-中国知名室内设计师葛亚曦</title>
+    <title><?php echo $site['name']; ?></title>
     <link rel="icon" href="http://www.lsdcasa.com/favicon.ico">
     <link rel="stylesheet" href="/assets/css/css/font_2497474_klbmmwvgivf.css">
     <link rel="stylesheet" href="/assets/css/css/app.css">
@@ -44,8 +44,8 @@
 
             <div class="head-handle">
                 <div class="head-lang">
-                    <a href="###">EN</a>
-                    <a href="javascript:;" class="on">CN</a>
+                    <a href="/en/index"  class="<?php echo $language=='en'?'on':''; ?>">EN</a>
+                    <a href="/cn/index" class="<?php echo $language=='cn'?'on':''; ?>">CN</a>
                 </div>
 
 
@@ -98,7 +98,7 @@
                             <ul>
                                 <?php foreach($vo['child'] as $co): ?>
                                 <li>
-                                    <a href="###"><?php echo $co['name']; ?></a>
+                                    <a href="/<?php echo $language; ?>/<?php echo $co['url']; ?>/<?php echo $co['id']; ?>"><?php echo $co['name']; ?></a>
                                 </li>
                                 <?php endforeach; ?>
                             </ul>
@@ -122,8 +122,9 @@
         <div class="container w1140 mt-70">
             <div class="page-column__title">
                 <div class="etitle fs36"><?php echo isset($list['0']['en_name'])?$list['0']['en_name']:''; ?></div>
-                <i class="line"></i>
+                
                 <?php if($language == 'cn'): ?>
+                    <i class="line"></i>
                     <div class="ctitle fs24"><?php echo isset($list['0']['name'])?$list['0']['name']:''; ?></div>
                 <?php endif; ?>
             </div>
@@ -247,20 +248,24 @@
         <div class="footer-main">
             <div class="copyright">
                 <a href="https://beian.miit.gov.cn/" target="_blank">
-                        ©2021再造 粤ICP备18001316号-1 Designed By ZAIZAO
+                        
+                        <?php echo $site['beian']; ?>
                     </a>
             </div>
         </div>
     </div>
 </footer>
 
-        <div class="foot-fix"></div>
-        <div class="foot-place"></div>
+<div class="foot-fix"></div>
+<div class="foot-place"></div>
+
+       
         <!-- END 底部结束 -->
     </div>
     <script src="/assets/js/js/main.js"></script>
         <script src="/assets/js/js/swiper.min.js"></script>
         <script src="/assets/js/js/wow.min.js"></script>
+        <script src="/assets/js/js/jquery-2.2.3.min.js"></script>
        
     <script>
         var swiper = new Swiper('.swiper-container', {

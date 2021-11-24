@@ -1,0 +1,107 @@
+{include file="common/head" /}
+    <!-- END 头部结束 -->
+    <div class="wrap">
+        <div class="container w1140">
+            <div class="company-honor__full mt-150">
+                <div class="page-column__title">
+                    <div class="etitle fs36">{$category.en_name??''}</div>
+                    
+                    {if condition="$language == 'cn'"}
+                        <i class="line"></i>
+                        <div class="ctitle fs24">{$category.name??''}</div>
+                    {/if}
+                    
+                </div>
+
+                <div class="c-honor__date mt-50">
+                    <div class="c-honor__dateSlick slick-initialized slick-slider">
+                        <div class="slick-list draggable">
+                            <div class="slick-track" style="opacity: 1; width: 400px; transform: translate3d(0px, 0px, 0px);">
+                                
+                                {foreach $awards_type as $k=>$v}
+                                <div id="onclick_qh" index-data="{$v['id']}" class="onclick_qh slick-slide slick-active {$k==0?'slick-current':''}" data-slick-index="0" aria-hidden="false" style="width: 80px;">
+                                    <div>
+                                        <div class="item-box" style="width: 100%; display: inline-block;">
+                                            <a href="javascript:;" tabindex="0" >
+                                                <div class="item-year">
+                                                    {if condition="$language == 'cn'"}
+                                                        {$v.name}
+                                                    {else /}
+                                                        {$v.en_name}
+                                                    {/if}
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/foreach}
+ 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-honor__arrow company-column__arrow" style="display: none;">
+                        <a href="javascript:;" class="c-honor__prev c-prev__btn icon-arrleft"></a>
+                        <a href="javascript:;" class="c-honor__next c-next__btn icon-arrright"></a>
+                    </div>
+                </div>
+                <div class="c-honor__list">
+                    {foreach $awards_list as $key=>$vo}
+                        <div class="item-rows gfy_child" id="gfy_list_{$key}" style="display: none;">
+                            <ul>
+                                {foreach $vo as $k=>$v}
+                                <li>
+                                    <div class="item-inner wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                        <h5>{$v.title}</h5>
+                                        <p>{$v.address}</p>
+                                    </div>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                            
+                    {/foreach}
+                </div>
+
+                <div class="mt-100"></div>
+            </div>
+        </div>
+
+
+        <!-- START 底部开始 -->
+        {include file="common/foot" /}
+        <!-- END 底部结束 -->
+    </div>
+    {include file="common/script" /}
+
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+
+        var init_id = $('.slick-current').attr('index-data');
+        $('#gfy_list_'+init_id).show();
+        $(".onclick_qh").click(function(){
+            $('.onclick_qh').each(function(i,n){
+                $('.onclick_qh').eq(i).removeClass('slick-current');
+                var id = $('.onclick_qh').eq(i).attr('index-data');
+                $('#gfy_list_'+id).hide();
+            })
+            var index_data = $(this).attr('index-data');
+            $(this).addClass('slick-current');
+            $('#gfy_list_'+index_data).show();
+            // gfy-child
+         
+
+        })
+
+    </script>
+
+</body>
+
+</html>

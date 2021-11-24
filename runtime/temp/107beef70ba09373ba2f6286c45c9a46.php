@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"/var/www/enterprise/public/../application/html/view/company/project_list.html";i:1637678636;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637495485;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637594279;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637495808;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:76:"/var/www/enterprise/public/../application/html/view/company/awards_list.html";i:1637683621;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637495485;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637594279;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
 
@@ -116,90 +116,68 @@
 <!-- END 头部结束 -->
     <!-- END 头部结束 -->
     <div class="wrap">
-        <div class="container w1140 mt-70">
-            <div class="project-content">
-                <div class="project-filtrate">
+        <div class="container w1140">
+            <div class="company-honor__full mt-150">
+                <div class="page-column__title">
+                    <div class="etitle fs36"><?php echo isset($category['en_name'])?$category['en_name']:''; ?></div>
+                    <i class="line"></i>
+                    <?php if($language == 'cn'): ?>
+                        <div class="ctitle fs24"><?php echo isset($category['name'])?$category['name']:''; ?></div>
+                    <?php endif; ?>
+                    
+                </div>
 
-                    <div class="item-filtrate pro-filtrate__item1">
-                        <ul>
-
-                            <?php foreach($level_one as $k=>$v): ?>
-                                <li class="<?php echo $k==0?'on':''; ?>">
-                                    <a href="javascript:;" data-id="proFiltrate<?php echo $v['id']; ?>">
-                                        <?php if($language == 'cn'): ?>
-                                            <?php echo $v['name']; else: ?>
-                                            <?php echo $v['en_name']; endif; ?>
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
-                         
-                        </ul>
+                <div class="c-honor__date mt-50">
+                    <div class="c-honor__dateSlick slick-initialized slick-slider">
+                        <div class="slick-list draggable">
+                            <div class="slick-track" style="opacity: 1; width: 400px; transform: translate3d(0px, 0px, 0px);">
+                                
+                                <?php foreach($awards_type as $k=>$v): ?>
+                                <div id="onclick_qh" index-data="<?php echo $v['id']; ?>" class="onclick_qh slick-slide slick-active <?php echo $k==0?'slick-current':''; ?>" data-slick-index="0" aria-hidden="false" style="width: 80px;">
+                                    <div>
+                                        <div class="item-box" style="width: 100%; display: inline-block;">
+                                            <a href="javascript:;" tabindex="0" >
+                                                <div class="item-year">
+                                                    <?php if($language == 'cn'): ?>
+                                                        <?php echo $v['name']; else: ?>
+                                                        <?php echo $v['en_name']; endif; ?>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php endforeach; ?>
+ 
+                            </div>
+                        </div>
                     </div>
-                    <div class="item-filtrate pro-filtrate__item2">
-                        <?php foreach($level_two as $ks=>$v): ?>
-                        <div class="item-fil__list2" id="proFiltrate<?php echo $v['pid']; ?>" style="">
-                            <ul>
-                                <li class="<?php echo $ks==0?'on':''; ?>">
-                                    <a href="javascript:;">
-                                        <?php if($language == 'cn'): ?>
-                                            <?php echo $v['name']; else: ?>
-                                            <?php echo $v['en_name']; endif; ?>
 
-                                        <?php echo $v['id']; ?>
-                                        <i class="icon-ra"></i>
-                                    </a>
-                                    <div class="item-hidden__html">
-                                        <ul>
-                                            <?php foreach($pr_list[$v['id']]??[] as $kss=>$vo): ?>
-                                            <li class="<?php echo $kss==0?'on':''; ?>">
-                                                <a href="javascript:;" data-url="/project/179.html">
-                                                    <div class="item-pic">
-                                                        <img class="lazyload" src="<?php echo $vo['image']; ?>" data-original="<?php echo $vo['image']; ?>" alt="">
-                                                    </div>
-                                                    <div class="item-title"><?php echo $vo['title']; ?></div>
-                                                </a>
-                                            </li>
-                                            <?php endforeach; ?>
-                                        </ul>
+                    <div class="c-honor__arrow company-column__arrow" style="display: none;">
+                        <a href="javascript:;" class="c-honor__prev c-prev__btn icon-arrleft"></a>
+                        <a href="javascript:;" class="c-honor__next c-next__btn icon-arrright"></a>
+                    </div>
+                </div>
+                <div class="c-honor__list">
+                    <?php foreach($awards_list as $key=>$vo): ?>
+                        <div class="item-rows gfy_child" id="gfy_list_<?php echo $key; ?>" style="display: none;">
+                            <ul>
+                                <?php foreach($vo as $k=>$v): ?>
+                                <li>
+                                    <div class="item-inner wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                        <h5><?php echo $v['title']; ?></h5>
+                                        <p><?php echo $v['address']; ?></p>
                                     </div>
                                 </li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
-                        <?php endforeach; ?>
-                     
-                    </div>
-
-                    <div class="item-filtrate pro-filtrate__item3">
-                        <ul>
-                            <?php foreach($pr_one_list as $kss=>$vo): ?>
-                                <li class="on">
-                                    <a href="javascript:;" data-url="/project/34.html">
-                                        <div class="item-pic">
-                                            <img class="lazyload" src="<?php echo isset($vo['image'])?$vo['image']:''; ?>" data-original="<?php echo isset($vo['image'])?$vo['image']:''; ?>" alt="">
-                                        </div>
-                                        <div class="item-title"><?php echo isset($vo['title'])?$vo['title']:''; ?></div>
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
+                            
+                    <?php endforeach; ?>
                 </div>
 
-                <div class="oriented-right__arrow">
-                    <i class="icon-ra"></i><i class="icon-ra"></i>
-                </div>
-
-                <div class="project-fancybook"></div>
-
-                <div class="project-show__bgPic">
-                    <a href="javascript:;" data-url="/project/34.html">
-                        <img class="lazyload" src="<?php echo isset($pr_one_list['0']['image'])?$pr_one_list['0']['image']:''; ?>" data-original="<?php echo isset($pr_one_list['0']['image'])?$pr_one_list['0']['image']:''; ?>" alt="" style="">
-                    </a>
-                </div>
+                <div class="mt-100"></div>
             </div>
         </div>
-
-
 
 
         <!-- START 底部开始 -->
@@ -224,7 +202,9 @@
     <script src="/assets/js/js/main.js"></script>
         <script src="/assets/js/js/swiper.min.js"></script>
         <script src="/assets/js/js/wow.min.js"></script>
+        <script src="/assets/js/js/jquery-2.2.3.min.js"></script>
        
+
     <script type="text/javascript">
         var wow = new WOW({
             boxClass: 'wow',
@@ -234,6 +214,23 @@
             live: true
         });
         wow.init();
+
+        var init_id = $('.slick-current').attr('index-data');
+        $('#gfy_list_'+init_id).show();
+        $(".onclick_qh").click(function(){
+            $('.onclick_qh').each(function(i,n){
+                $('.onclick_qh').eq(i).removeClass('slick-current');
+                var id = $('.onclick_qh').eq(i).attr('index-data');
+                $('#gfy_list_'+id).hide();
+            })
+            var index_data = $(this).attr('index-data');
+            $(this).addClass('slick-current');
+            $('#gfy_list_'+index_data).show();
+            // gfy-child
+         
+
+        })
+
     </script>
 
 </body>

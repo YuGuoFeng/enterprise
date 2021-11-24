@@ -1,0 +1,73 @@
+{include file="common/head" /}
+    <!-- END 头部结束 -->
+    <div class="wrap">
+
+
+        <div class="container w1140 mt-70">
+            <div class="page-column__title">
+                <div class="etitle fs36">{$category.en_name??''}</div>
+                
+                {if condition="$language == 'cn'"}
+                    <i class="line"></i>
+                    <div class="ctitle fs24">{$category.name??''}</div>
+                {/if}
+            </div>
+
+            <div class="sec-txt mt-30">
+                {if condition="$language == 'cn'"}
+                    {$category.content??''}
+                {else /}
+                    {$category.en_content??''}
+                {/if}
+
+            </div>
+
+            <div class="pe-code wow fadeInUp mt-60" style="visibility: visible; animation-name: fadeInUp;">
+               
+                {foreach $code_bottom as $v}    
+                    <div class="item-box">
+                        <div class="item-pic">
+                            <img class="lazyload" src="{$v.image??''}" data-original="{$v.image??''}">
+                        </div>
+                        <div class="item-txt1 item-txt">
+                            {if condition="$language == 'cn'"}
+                                {$v.content??''}
+                            {else /}
+                                {$v.en_content??''}
+                            {/if}
+                        </div>
+                    </div>
+                    {/foreach}
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- START 底部开始 -->
+        {include file="common/foot" /}
+        <!-- END 底部结束 -->
+    </div>
+    {include file="common/script" /}
+
+    <script type="text/javascript">
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    </script>
+
+</body>
+
+</html>
