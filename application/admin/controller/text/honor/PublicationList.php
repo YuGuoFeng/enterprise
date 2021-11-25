@@ -69,6 +69,7 @@ class PublicationList extends Backend
                         $result = (new sm)->insert([
                             'title' => $params['title'],
                             'tbale' => 'publication_list',
+                            'language' => $params['language'],
                             'table_id' => $result
                         ]);
                     }
@@ -128,6 +129,7 @@ class PublicationList extends Backend
                     if($result){
                         $result = (new sm)->where('table_id',$ids)->where('tbale','publication_list')->update([
                             'title' => $params['title'],
+                            'language' => $params['language'],
                         ]);
                     }
                     Db::commit();

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/var/www/enterprise/public/../application/html/view/company/index.html";i:1637769606;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637769949;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637769978;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"/var/www/enterprise/public/../application/html/view/company/index.html";i:1637769606;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637853865;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637769978;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
 
@@ -34,7 +34,7 @@
 
     <div class="header">
         <div class="header-main">
-            <a href="###" class="head-contact">联系我们</a>
+            <a href="/<?php echo $language; ?>/contact/21" class="head-contact">联系我们</a>
 
             <div class="head-logo__full">
                 <a href="###" class="logo">
@@ -51,7 +51,7 @@
 
                 <div class="head-search">
                     <div class="head-search__box">
-                        <form action="" method="get">
+                        <form action="/<?php echo $language; ?>/search" method="get">
                             <button type="button" class="hs-btn icon-search"></button>
                             <input class="hs-input" name="keywords" type="text" autocomplete="off" placeholder="搜索...">
                         </form>

@@ -105,6 +105,7 @@ class AwardsList extends Backend
                     if($result){
                         $result = (new sm)->insert([
                             'title' => $params['title'],
+                            'language' => $params['language'],
                             'tbale' => 'awards_list',
                             'table_id' => $result
                         ]);
@@ -165,6 +166,7 @@ class AwardsList extends Backend
                     if($result){
                         $result = (new sm)->where('table_id',$ids)->where('tbale','awards_list')->update([
                             'title' => $params['title'],
+                            'language' => $params['language'],
                         ]);
                     }
                     Db::commit();

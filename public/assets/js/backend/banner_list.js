@@ -29,7 +29,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'title', title: __('Title'), operate: 'LIKE'},
                         {field: 'en_title', title: __('En_title'), operate: 'LIKE'},
                         {field: 'image', title: __('Image'), operate: false, events: Table.api.events.image, formatter: Table.api.formatter.image},
-                        {field: 'url', title: __('Url'), operate: 'LIKE', formatter: Table.api.formatter.url},
+                        // {field: 'url', title: __('Url'), operate: 'LIKE', formatter: Table.api.formatter.url},
                         {field: 'weigh', title: __('Weigh'), operate: false},
                         {
                             field: 'status',

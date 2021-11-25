@@ -33,6 +33,8 @@ Route::group('cn',function(){
     Route::get('/join/list/:id','html/join/joinList');
     // 联系我们
     Route::get('/contact/:id','html/join/contact');
+    // e_search
+    Route::get('/search','html/join/search');
 
 
 });

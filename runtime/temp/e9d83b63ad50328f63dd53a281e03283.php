@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"/var/www/enterprise/public/../application/html/view/join/contact.html";i:1637769226;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637769539;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637594279;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"/var/www/enterprise/public/../application/html/view/join/contact.html";i:1637769655;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637853865;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637769978;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
 
@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>LSD-再造集团-中国知名室内设计师葛亚曦</title>
+    <title><?php echo $site['name']; ?></title>
     <link rel="icon" href="http://www.lsdcasa.com/favicon.ico">
     <link rel="stylesheet" href="/assets/css/css/font_2497474_klbmmwvgivf.css">
     <link rel="stylesheet" href="/assets/css/css/app.css">
@@ -34,7 +34,7 @@
 
     <div class="header">
         <div class="header-main">
-            <a href="###" class="head-contact">联系我们</a>
+            <a href="/<?php echo $language; ?>/contact/21" class="head-contact">联系我们</a>
 
             <div class="head-logo__full">
                 <a href="###" class="logo">
@@ -44,14 +44,14 @@
 
             <div class="head-handle">
                 <div class="head-lang">
-                    <a href="/en/index">EN</a>
-                    <a href="/cn/index" class="on">CN</a>
+                    <a href="/en/index"  class="<?php echo $language=='en'?'on':''; ?>">EN</a>
+                    <a href="/cn/index" class="<?php echo $language=='cn'?'on':''; ?>">CN</a>
                 </div>
 
 
                 <div class="head-search">
                     <div class="head-search__box">
-                        <form action="" method="get">
+                        <form action="/<?php echo $language; ?>/search" method="get">
                             <button type="button" class="hs-btn icon-search"></button>
                             <input class="hs-input" name="keywords" type="text" autocomplete="off" placeholder="搜索...">
                         </form>
@@ -121,8 +121,9 @@
         <div class="container w1140 mt-70">
             <div class="page-column__title">
                 <div class="etitle fs36"><?php echo isset($category['en_name'])?$category['en_name']:''; ?></div>
-                <i class="line"></i>
+                
                 <?php if($language == 'cn'): ?>
+                    <i class="line"></i>
                     <div class="ctitle fs24"><?php echo isset($category['name'])?$category['name']:''; ?></div>
                 <?php endif; ?>
             </div>
@@ -169,7 +170,8 @@
         <div class="footer-main">
             <div class="copyright">
                 <a href="https://beian.miit.gov.cn/" target="_blank">
-                        ©2021再造 粤ICP备18001316号-1 Designed By ZAIZAO
+                        
+                        <?php echo $site['beian']; ?>
                     </a>
             </div>
         </div>

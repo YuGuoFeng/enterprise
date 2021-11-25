@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"/var/www/enterprise/public/../application/html/view/company/news_show.html";i:1637766299;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637851083;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637769978;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"/var/www/enterprise/public/../application/html/view/join/search.html";i:1637852728;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637851083;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:58:"/var/www/enterprise/application/html/view/common/foot.html";i:1637769978;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
 
@@ -116,54 +116,29 @@
 <!-- END 头部结束 -->
     <!-- END 头部结束 -->
     <div class="wrap">
-        <div class="container w800 mt-50">
-            <div class="nd-top__cont">
-                <div class="nd-caption">
 
-                    <a href="javascript:history.back(-1)" class="back-list pro-back__list">
-                        <i class="icon-back"></i><span>返回列表</span>
-                    </a>
 
-                    <div class="nd-title fs24">
-                        <h1><?php echo isset($news_list['title'])?$news_list['title']:''; ?></h1>
-                    </div>
-                    <div class="nd-time sec-txt"><?php  echo date('Y/m/d',$news_listv['entry_time']??0);   ?></div>
+        <div class="container mt-50">
+            <div class="search-wrap">
+                <div class="search-header">
+                    <h3>搜索结果</h3>
+                    <p>关键词：<span><?php echo $key; ?></span>，共 <span><?php echo $num; ?></span> 个结果</p>
                 </div>
-
-                <div class="nd-share__full">
-                    <div class="nd-share__st">
-                        <i class="icon-share"></i>
-                    </div>
-
-                    <div class="nd-share__box social">
-                        <a href="javascript:;" class="icon-wx" data-share="weixin"></a>
-                        <a href="javascript:;" class="icon-wb" data-share="weibo"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="page-nd__inner paragraph mt-60">
-                <p><img alt="" src="<?php echo isset($news_list['image'])?$news_list['image']:''; ?>" style="width: 800px; height: 450px;"></p>
-
-                <p>&nbsp;</p>
-                <?php echo isset($news_list['content'])?$news_list['content']:''; ?>
-                <!-- <p><strong>LSD作品《西安方所》入围加拿大2021 AZ Awards决赛</strong></p>
-
-                <p>经过数月的追逐</p>
-
-                <p>西安方所成功从&nbsp;<strong>57&nbsp;</strong>个国家</p>
-
-                <p><strong>1209&nbsp;</strong>个参赛作品中突围而出</p>
-
-                <p>成为&nbsp;<strong>72&nbsp;</strong>个入围者之一</p>
-
-                <p>其中仅有&nbsp;<strong>5&nbsp;</strong>个中国项目进入入围名单</p>
-
-                <p>得奖率不足&nbsp;<strong>2%</strong></p> -->
+                <div class="line mt-10"></div>
+                <ul class="list-search mt-30">
+                    <?php foreach($search as $v): ?>
+                    <li>
+                        <a href="<?php echo $v['url']; ?>" class="search-item">
+                            <h4><?php echo isset($v['title'])?$v['title']:''; ?></h4>
+                            <p>来源：<span>品牌介绍 . <?php echo isset($v['ly_name'])?$v['ly_name']:''; ?> </span></p>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
 
             </div>
 
-            <div class="mt-150"></div>
+            <div class="mt-200"></div>
         </div>
 
 
@@ -175,14 +150,7 @@
 
 
         <!-- START 底部开始 -->
-        <script src="/assets/js/js/main.js"></script>
-        <script src="/assets/js/js/swiper.min.js"></script>
-        <script src="/assets/js/js/wow.min.js"></script>
-        <script src="/assets/js/js/jquery-2.2.3.min.js"></script>
-       
-        <!-- END 底部结束 -->
-    </div>
-    
+        
 
 <footer>
     <div class="footer">
@@ -199,6 +167,13 @@
 
 <div class="foot-fix"></div>
 <div class="foot-place"></div>
+        <!-- END 底部结束 -->
+    </div>
+    <script src="/assets/js/js/main.js"></script>
+        <script src="/assets/js/js/swiper.min.js"></script>
+        <script src="/assets/js/js/wow.min.js"></script>
+        <script src="/assets/js/js/jquery-2.2.3.min.js"></script>
+       
 
     <script type="text/javascript">
         var wow = new WOW({

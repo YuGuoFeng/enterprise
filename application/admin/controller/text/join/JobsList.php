@@ -70,6 +70,7 @@ class JobsList extends Backend
                     if($result){
                         $result = (new sm)->insert([
                             'title' => $params['title'],
+                            'language' => $params['language'],
                             'tbale' => 'jobs_list',
                             'table_id' => $result
                         ]);
@@ -133,6 +134,7 @@ class JobsList extends Backend
                     if($result){
                         $result = (new sm)->where('table_id',$ids)->where('tbale','jobs_list')->update([
                             'title' => $params['title'],
+                            'language' => $params['language'],
                         ]);
                     }
                     Db::commit();

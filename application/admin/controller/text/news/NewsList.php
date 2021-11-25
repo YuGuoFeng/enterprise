@@ -73,6 +73,8 @@ class NewsList extends Backend
                     if($result){
                         $result = (new sm)->insert([
                             'title' => $params['title'],
+                            'content' => $params['content'],
+                            'language' => $params['language'],
                             'tbale' => 'news_list',
                             'table_id' => $result
                         ]);
@@ -136,6 +138,8 @@ class NewsList extends Backend
                     if($result){
                         $result = (new sm)->where('table_id',$ids)->where('tbale','news_list')->update([
                             'title' => $params['title'],
+                            'content' => $params['content'],
+                            'language' => $params['language'],
                         ]);
                     }
                     Db::commit();

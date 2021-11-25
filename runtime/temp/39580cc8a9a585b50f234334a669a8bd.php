@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"/var/www/enterprise/public/../application/html/view/index/index.html";i:1637501496;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637769707;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"/var/www/enterprise/public/../application/html/view/index/index.html";i:1637853963;s:58:"/var/www/enterprise/application/html/view/common/head.html";i:1637853865;s:57:"/var/www/enterprise/application/html/view/common/nav.html";i:1637678989;s:60:"/var/www/enterprise/application/html/view/common/script.html";i:1637682202;}*/ ?>
 
 <!DOCTYPE html>
 <html lang="zh-cn" class=" cssanimations">
@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>LSD-再造集团-中国知名室内设计师葛亚曦</title>
+    <title><?php echo $site['name']; ?></title>
     <link rel="icon" href="http://www.lsdcasa.com/favicon.ico">
     <link rel="stylesheet" href="/assets/css/css/font_2497474_klbmmwvgivf.css">
     <link rel="stylesheet" href="/assets/css/css/app.css">
@@ -35,7 +35,7 @@
 
     <div class="header">
         <div class="header-main">
-            <a href="###" class="head-contact">联系我们</a>
+            <a href="/<?php echo $language; ?>/contact/21" class="head-contact">联系我们</a>
 
             <div class="head-logo__full">
                 <a href="###" class="logo">
@@ -52,7 +52,7 @@
 
                 <div class="head-search">
                     <div class="head-search__box">
-                        <form action="" method="get">
+                        <form action="/<?php echo $language; ?>/search" method="get">
                             <button type="button" class="hs-btn icon-search"></button>
                             <input class="hs-input" name="keywords" type="text" autocomplete="off" placeholder="搜索...">
                         </form>
@@ -134,7 +134,7 @@
                             <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" role="tabpanel" style="width: 1780px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" aria-describedby="slick-slide-control00">
                                 <div>
                                     <div class="item-box" style="width: 100%; display: inline-block;">
-                                        <a href="###" projecttarget="_blank" tabindex="0">
+                                        <a href="/<?php echo $language; ?>/project/list/16" projecttarget="_blank" tabindex="0">
                                             <div class="item-bg bg-cover" style="background-image: url(<?php echo $vo['image']; ?>);"></div>
                                             <div class="item-cont">
                                                 <div class="item-inner">

@@ -4,6 +4,7 @@ namespace app\html\controller;
 
 use app\common\model\BannerList as alm;
 use think\DB;
+use think\Request;
 class Join extends BackController
 {
 
@@ -65,6 +66,42 @@ class Join extends BackController
 
         $this->assign('category',$category);
         $this->assign('code_bottom',$code_bottom);
+        return $this->view->fetch();
+    }
+
+
+    public function search(Request $request){
+        $key = $request->get('keywords');
+        $search = DB::name('search')
+        ->where(function($query)use($key){
+            $query->whereOr('title','like','%'.$key.'%')->whereOr('content','like','%'.$key.'%');
+        })
+        ->where(['language'=>$this->auth])
+        ->order('id desc')
+        ->select();
+
+        $layuan = [
+            'awards_list' => ['name'=>'奖项荣誉','url'=>'/'.$this->auth.'/awards/list/27'],
+            'publication_list' => ['name'=>'期刊发表','url'=>'/'.$this->auth.'/publication/list/28'],
+            // 'product_list' => '产品',
+            'news_list' => ['name'=>'公司动态','url'=>'/'.$this->auth.'/news/show'],
+            'jobs_list' => ['name'=>'招聘岗位','url'=>''],
+        ];
+
+        foreach($search as &$v){
+            $v['ly_name'] = $layuan[$v['tbale']]['name']??'';
+            if($v['tbale'] == 'news_list'){
+                $url =  $layuan[$v['tbale']]['url']??'';
+                $v['url'] = !empty($url)?$url.'/'.$v['table_id']:'';
+            }else{
+                $v['url'] = $layuan[$v['tbale']]['url']??'';
+            }
+           
+        }
+        $num = count($search);
+        $this->assign('search',$search);
+        $this->assign('num',$num);
+        $this->assign('key',$key);
         return $this->view->fetch();
     }
 }
